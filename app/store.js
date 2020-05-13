@@ -1,16 +1,22 @@
 import Car from "./Models/Car.js";
 import House from "./Models/House.js"
-
+import Job from "./Models/Job.js"
 
 let _state = {
   /** @type {Car[]} */
   cars: [
-    new Car({ title: "cheese", make: "italy", model: "mozzarella", price: "10000", description: "pizza time" }),
+    new Car({ title: "cheese", make: "italy", model: "mozzarella", price: "10000", description: "pizza time", imgUrl: "https://payload.cargocollective.com/1/1/59436/923743/Car-Web.jpg" })
   ],
+
   /** @type {House[]} */
   houses: [
     new House({ address: "1234 this street", squarefootage: "1234", price: "123456", description: "123456789", imgUrl: "//placehold.it/200x200" })
-  ]
+  ],
+
+  /** @type {Job[]} */
+  jobs: [
+    new Job({ position: "fry cook", wage: ".25", location: "krusty krab", description: "dont be square" })
+  ],
 
 };
 
@@ -48,12 +54,18 @@ class Store {
     _state.houses.splice(index, 1)
   }
 
+  addJob(job) {
+    _state.jobs.push(job)
+  }
 
-
-
-
-
-
+  removeJob(id) {
+    let index = _state.jobs.findIndex(j => j.id == id)
+    if (index == -1) {
+      console.error("not this time")
+      return;
+    }
+    _state.jobs.splice(index, 1)
+  }
 }
 
 const STORE = new Store();

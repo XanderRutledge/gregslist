@@ -18,6 +18,7 @@
             </div>
         </div>
     </header>
+
     <main class="container-fluid">
         <div class="row">
             <div class="col mt-5">
@@ -56,9 +57,12 @@
                 </form>
             </div>
         </div>
-        <div class="row mt-3" id="cars">
 
+
+        <div class="row mt-3" id="cars">
         </div>
+
+
         <div class="row">
             <div class="col mt-5">
                 <form class="form-inline" onsubmit="app.houseController.newHouse(event)">
@@ -91,9 +95,51 @@
                 </form>
             </div>
         </div>
+
+
         <div class="row mt-3" id="houses">
+        </div>
+
+
+        <div class="row">
+            <div class="col mt-5">
+                <form class="form-inline" onsubmit="app.jobController.newJob(event)">
+                    <div class="form-group mx-2">
+                        <label for="position">position</label>
+                        <input type="text" class="form-control" name="position" id="position"
+                            aria-describedby="position" placeholder="Adress..." required>
+                    </div>
+                    <div class="form-group mx-2">
+                        <label for="wage">wage</label>
+                        <input type="number" class="form-control" name="wage" id="wage" aria-describedby="wage"
+                            required>
+                    </div>
+                    <div class="form-group mx-2">
+                        <label for="location">location</label>
+                        <input type="text" class="form-control" name="location" id="location"
+                            aria-describedby="location" placeholder="location...">
+                    </div>
+                    <div class="form-group mx-2">
+                        <label for="description">Description</label>
+                        <input type="text" class="form-control" name="description" id="description"
+                            aria-describedby="description" placeholder="Description...">
+                    </div>
+                    <div class="form-group mx-2">
+                        <label for="imgUrl">Image Url</label>
+                        <input type="url" class="form-control" name="imgUrl" id="imgUrl" aria-describedby="imgUrl"
+                            placeholder="Image Url...">
+                    </div>
+                    <button type="submit" class="btn btn-outline-success">Submit</button>
+                </form>
+            </div>
+        </div>
+
+
+        <div class="row mt-3" id="jobs">
 
         </div>
+
+
     </main>
     <footer class="container-fluid bg-info">
         <div class="row">

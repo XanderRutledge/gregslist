@@ -8,8 +8,6 @@ class HouseService {
         STORE.removeHouse(id)
     }
 
-
-
     newHouse(rawHouse) {
         let house = new House(rawHouse)
         STORE.addHouse(house)
