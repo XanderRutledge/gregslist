@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/style.css">
+    <title>Gregslist</title>
+</head>
+
+<body>
+    <header class="container-fluid bg-info">
+        <div class="row">
+            <div class="col text-center text-light">
+                <h1>Gregslist</h1>
+            </div>
+        </div>
+    </header>
+    <main class="container-fluid">
+        <div class="row">
+            <div class="col mt-5">
+                <form class="form-inline" onsubmit="app.carsController.newCar(event)">
+                    <div class="form-group mx-2">
+                        <label for="title">Title</label>
+                        <input type="text" class="form-control" name="title" id="title" aria-describedby="title"
+                            placeholder="Title..." required>
+                    </div>
+                    <div class="form-group mx-2">
+                        <label for="make">Make</label>
+                        <input type="text" class="form-control" name="make" id="make" aria-describedby="make"
+                            placeholder="Make..." required>
+                    </div>
+                    <div class="form-group mx-2">
+                        <label for="model">Model</label>
+                        <input type="text" class="form-control" name="model" id="model" aria-describedby="model"
+                            placeholder="Model...">
+                    </div>
+                    <div class="form-group mx-2">
+                        <label for="price">Price</label>
+                        <input type="number" class="form-control" name="price" id="price" aria-describedby="price"
+                            required>
+                    </div>
+                    <div class="form-group mx-2">
+                        <label for="description">Description</label>
+                        <input type="text" class="form-control" name="description" id="description"
+                            aria-describedby="description" placeholder="Description...">
+                    </div>
+                    <div class="form-group mx-2">
+                        <label for="imgUrl">Image Url</label>
+                        <input type="url" class="form-control" name="imgUrl" id="imgUrl" aria-describedby="imgUrl"
+                            placeholder="Image Url...">
+                    </div>
+                    <button type="submit" class="btn btn-outline-success">Submit</button>
+                </form>
+            </div>
+        </div>
+        <div class="row mt-3" id="cars">
+
+        </div>
+        <div class="row">
+            <div class="col mt-5">
+                <form class="form-inline" onsubmit="app.houseController.newHouse(event)">
+                    <div class="form-group mx-2">
+                        <label for="address">address</label>
+                        <input type="text" class="form-control" name="address" id="address" aria-describedby="address"
+                            placeholder="Adress..." required>
+                    </div>
+                    <div class="form-group mx-2">
+                        <label for="squarefootage">squarefootage</label>
+                        <input type="number" class="form-control" name="squarefootage" id="squarefootage"
+                            aria-describedby="squarefootage" placeholder="Square footage..." required>
+                    </div>
+                    <div class="form-group mx-2">
+                        <label for="price">Price</label>
+                        <input type="number" class="form-control" name="price" id="price" aria-describedby="price"
+                            required>
+                    </div>
+                    <div class="form-group mx-2">
+                        <label for="description">Description</label>
+                        <input type="text" class="form-control" name="description" id="description"
+                            aria-describedby="description" placeholder="Description...">
+                    </div>
+                    <div class="form-group mx-2">
+                        <label for="imgUrl">Image Url</label>
+                        <input type="url" class="form-control" name="imgUrl" id="imgUrl" aria-describedby="imgUrl"
+                            placeholder="Image Url...">
+                    </div>
+                    <button type="submit" class="btn btn-outline-success">Submit</button>
+                </form>
+            </div>
+        </div>
+        <div class="row mt-3" id="houses">
+
+        </div>
+    </main>
+    <footer class="container-fluid bg-info">
+        <div class="row">
+            <div class="col text-center text-light">
+                <p>Made with love by Codeworks</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app/main.js" type="module"></script>
+</body>
+
+</html>
